@@ -107,11 +107,18 @@ namespace LB1_Alkhimovich
                 case "1/X":
                     flag = true;
                     double.TryParse(Display.Text, out Value1);
-                    Result = Math.Round(1 / Value1,11);
-                    TextBl.Text +=  "1/" + Display.Text + "=" + Result;
-                    Display.Text = "";
-                    Button_Click_2(sender, e);
-                    Display.Text = Result.ToString();
+                    if (Value1 == 0)
+                    {
+                        Display.Text = "Деление на 0!";
+                    }
+                    else
+                    {
+                        Result = Math.Round(1 / Value1, 11);
+                        TextBl.Text += "1/" + Display.Text + "=" + Result;
+                        Display.Text = "";
+                        Button_Click_2(sender, e);
+                        Display.Text = Result.ToString();
+                    }
                     break;
                 case "SQRT":
                     flag = true;
@@ -247,7 +254,7 @@ namespace LB1_Alkhimovich
                         TextBl.Text +=  Environment.NewLine;
                         return;
                     }
-                    Result = Value1 / Value2;
+                    Result = Math.Round(Value1 / Value2,11);
                     Display.Text = Result.ToString();
                     TextBl.Text += Value2 + " = " + Result + Environment.NewLine;
                 }

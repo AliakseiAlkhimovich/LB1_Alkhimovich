@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LB1_Alkhimovich"
         mc:Ignorable="d"
-        Title="Calculate_Alkhimovich" Height="486" Width="471" MinHeight="486" MinWidth="471" Left="500" Top="200" HorizontalAlignment="Right" Background="#FFFFFDF5">
+        Title="Calculate_Alkhimovich" Height="486" Width="480" MinHeight="486" MinWidth="471" Left="500" Top="200" HorizontalAlignment="Right" Background="#FFFFFDF5">
     
     <Grid Margin="0,105,0,0" >
         <Grid.ColumnDefinitions>
