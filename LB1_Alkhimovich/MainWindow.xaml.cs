@@ -29,7 +29,10 @@ namespace LB1_Alkhimovich
         {
             InitializeComponent();
         }
-
+        private void Clear(object sender, MouseButtonEventArgs e)
+        {
+            TextBl.Text = "";
+        }
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             int lastNewLineIndex = TextBl.Text.LastIndexOf(Environment.NewLine);

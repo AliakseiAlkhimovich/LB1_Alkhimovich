@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LB1_Alkhimovich"
         mc:Ignorable="d"
-        Title="Calculate_Alkhimovich" Height="486" Width="480" MinHeight="486" MinWidth="471" Left="500" Top="200" HorizontalAlignment="Right" Background="#FFFFFDF5">
-    
+        Title="Calculate_Alkhimovich" Height="486" Width="480" MinHeight="486" MinWidth="471" Left="500" Top="200" HorizontalAlignment="Right" Background="#FFFFFDF5" Icon="/Calc.png">
+
     <Grid Margin="0,105,0,0" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="70*"/>
@@ -64,5 +64,6 @@
         <TextBlock x:Name="TextBl"  Grid.Column="4" TextWrapping="Wrap" RenderTransformOrigin="0.519,0.833" Grid.RowSpan="6" Margin="1,1,5,1" TextAlignment="Right" FontSize="14"/>
         <RadioButton x:Name="GRAD" Content="GRAD" HorizontalAlignment="Left" Margin="10,-25,0,0" VerticalAlignment="Top" IsChecked="True"/>
         <RadioButton x:Name="RAD" Grid.Column="1" Content="RAD" HorizontalAlignment="Left" Margin="10,-25,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="54"/>
+        <Label Grid.Column="4" Content="Очистить историю" HorizontalAlignment="Right" Margin="1,-31,0,0" VerticalAlignment="Top" Width="164" RenderTransformOrigin="0.514,1.889" HorizontalContentAlignment="Center"  MouseLeftButtonDown="Clear"/>
     </Grid>
 </Window>
