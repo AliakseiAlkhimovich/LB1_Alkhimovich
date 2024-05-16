@@ -51,8 +51,8 @@ namespace LB1_Alkhimovich
         {
             Button button = (Button)sender;
             string buttonText = button.Content.ToString();
-
-            if (Display.Text == "0")
+            if (Display.Text == "Деление на 0!") { Display.Text = ""; }
+                if (Display.Text == "0")
             {
                 Display.Text = buttonText;
             }
@@ -68,6 +68,12 @@ namespace LB1_Alkhimovich
 
             switch (operation)
             {
+                case ",":
+                    if (!Display.Text.Contains(","))
+                    {
+                        Display.Text += ",";
+                    }
+                    break;
                 case "+":
                     TextBl.Text += Display.Text + " + ";
                     double.TryParse(Display.Text, out Value1);
