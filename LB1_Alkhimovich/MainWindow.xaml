@@ -1,0 +1,68 @@
+﻿<Window x:Class="LB1_Alkhimovich.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LB1_Alkhimovich"
+        mc:Ignorable="d"
+        Title="Calculate_Alkhimovich" Height="486" Width="471" MinHeight="486" MinWidth="471" Left="500" Top="200" HorizontalAlignment="Right" Background="#FFFFFDF5">
+    
+    <Grid Margin="0,105,0,0" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="154*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Margin="0,40,71,21" Grid.Row="1"/>
+
+        <Grid Grid.ColumnSpan="4" Margin="5,-93,6,85">
+            <TextBox x:Name="Display" MaxLength="8" Text="0"  Margin="5,5,5,5" TextAlignment="Right" BorderThickness="0,0,0,0" FontSize="36" FontWeight="Bold" UndoLimit="10" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top" IsReadOnly="True" TextWrapping="Wrap" MaxLines="1" BorderBrush="#FFFAFBFD" Background="#FFEAEAEA">
+                <TextBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="0"/>
+                    </TransformGroup>
+                </TextBox.RenderTransform>
+            </TextBox>
+        </Grid>
+        <Button Content="0" Grid.Row="5"  Margin="5,5,5,5" FontSize="22" Grid.Column="1"  Click="NumberButton_Click"  />
+        <Button Content="," Grid.Row="5"  Margin="5,5,5,5" FontSize="24" Grid.Column="2" Click="NumberButton_Click" />
+        <Button Content="1" Grid.Row="4"  Margin="5,5,5,5" FontSize="22" Click="NumberButton_Click" />
+        <Button Content="2" Grid.Row="4"  Margin="5,5,5,5" FontSize="22" Grid.Column="1" Click="NumberButton_Click" />
+        <Button Content="3" Grid.Row="4"  Margin="5,5,5,5" FontSize="22" Grid.Column="2" Click="NumberButton_Click" />
+        <Button Content="4" Grid.Row="3"  Margin="5,5,5,5" FontSize="22" Click="NumberButton_Click" />
+        <Button Content="5" Grid.Row="3"  Margin="5,5,5,5" FontSize="22" Grid.Column="1" Click="NumberButton_Click" />
+        <Button Content="6" Grid.Row="3"  Margin="5,5,5,5" FontSize="22" Grid.Column="2" Click="NumberButton_Click" />
+        <Button Content="7" Grid.Row="2"  Margin="5,5,5,5" FontSize="22" Click="NumberButton_Click" />
+        <Button Content="8" Grid.Row="2"  Margin="5,5,5,5" FontSize="22" Grid.Column="1" Click="NumberButton_Click" />
+        <Button Content="9" Grid.Row="2"  Margin="5,5,5,5" FontSize="22" Grid.Column="2" Click="NumberButton_Click" />
+        <Button Content="=" Grid.Row="5"  Margin="5,5,5,5" FontSize="24" Grid.Column="3" Click="CalculateButton_Click" />
+        <Button Content="+" Grid.Row="4"  Margin="5,5,5,5" FontSize="24" Grid.Column="3" Click="OperationButton_Click"  />
+        <Button Content="-" Grid.Row="3"  Margin="5,5,5,5" FontSize="24" Grid.Column="3" Click="OperationButton_Click" />
+        <Button Content="X" Grid.Row="2"  Margin="5,5,5,5" FontSize="16" Grid.Column="3"  Click="OperationButton_Click"/>
+        <Button Content="/" Grid.Row="1"  Margin="5,5,5,5" FontSize="16" Grid.Column="3"  Click="OperationButton_Click"/>
+        <Button Content="C"  Margin="5,5,5,5" FontSize="16" Grid.Column="3" Grid.ColumnSpan="1" Click="Button_Click_2" />
+        <Button Content="1/X" Grid.Row="1"  Margin="5,5,5,5" FontSize="16" Grid.ColumnSpan="1" Click="OperationButton_Click" />
+        <Button Content="SQRT" Grid.Row="1"  Margin="5,5,5,5" Grid.ColumnSpan="1"  Grid.Column="1" FontSize="14" Click="OperationButton_Click" />
+        <Button Content="sin"  Margin="5,5,5,5" FontSize="16" Grid.ColumnSpan="1" Click="OperationButton_Click" />
+        <Button Content="cos"  Margin="5,5,5,5" FontSize="16" Grid.ColumnSpan="1" Grid.Column="1" Click="OperationButton_Click" />
+        <Button Content="tg"  Margin="4,5,5,5" FontSize="16" Grid.ColumnSpan="1" Grid.Column="2" Click="OperationButton_Click" />
+        <Button Content="X ⁿ"  Margin="4,5,5,5" FontSize="16" Grid.ColumnSpan="1" Grid.Column="2" Grid.Row="1"  Click="OperationButton_Click" />
+        <Button Content="+/-" Grid.Row="5" Margin="5,5,5,5" FontSize="22" Click="OperationButton_Click"/>
+        <TextBlock x:Name="TextBl"  Grid.Column="4" TextWrapping="Wrap" RenderTransformOrigin="0.519,0.833" Grid.RowSpan="6" Margin="1,1,5,1" TextAlignment="Right" FontSize="14"/>
+        <RadioButton x:Name="GRAD" Content="GRAD" HorizontalAlignment="Left" Margin="10,-25,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <RadioButton x:Name="RAD" Grid.Column="1" Content="RAD" HorizontalAlignment="Left" Margin="10,-25,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="54"/>
+    </Grid>
+</Window>
